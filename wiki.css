@@ -1,0 +1,32 @@
+
+
+ul {
+    /*background: #3399ff;
+    padding: 20px;*/
+    list-style-type: none;
+
+}
+
+li {
+    padding: 20px;
+    margin-left: 35px;
+}
+li:hover{
+	background-color: yellow;
+}
+
+li {
+    background: #cce5ff;
+    margin: 5px;
+}
+a{
+	color: black;
+}
+a:hover{
+	
+	text-decoration: none;
+}
+body{
+	background-color: gray;
+}
+
