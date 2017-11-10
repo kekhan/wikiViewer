@@ -1,7 +1,9 @@
 var myRequest = new XMLHttpRequest();
 
 function getWikiInfo(){
-	var val = prompt("Search wikipedia");
+
+	var val = document.getElementById('input').value;
+
 	document.getElementById("opened").innerHTML= "wikipedia Search: "+val;	
 	var myRequest = new XMLHttpRequest();
 	myRequest.onreadystatechange = function(){
@@ -20,9 +22,10 @@ function getWikiInfo(){
 
 	var url = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + val + '&format=json&origin=*';
 	myRequest.open('GET',url,true);
-	myRequest.send(null);-1
+	myRequest.send(null);
 }
 function wikiHtmlCall(data){
+	document.getElementById("listItems").innerHTML="";
 	document.getElementById("textLoad").innerHTML ="Reload to Search Again"
 	var articleTitles =data[1];
 	var webUrl= data[data.length-1]
