@@ -1,5 +1,21 @@
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #2C3E50;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #D7DADB;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 5px 20px 5px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
 
-
+input[type=text]:focus {
+    width: 100%;
+}
 ul {
     /*background: #3399ff;
     padding: 20px;*/
@@ -12,21 +28,31 @@ li {
     margin-left: 35px;
 }
 li:hover{
-	background-color: yellow;
+	background-color: #FC4349;
 }
 
 li {
-    background: #cce5ff;
+    background: #D7DADB;
     margin: 5px;
 }
 a{
-	color: black;
+	color: #6DBCDB;
 }
 a:hover{
 	
 	text-decoration: none;
 }
 body{
-	background-color: gray;
+	background-color: #2C3E50;
+}
+h1{
+    margin: auto;
+    padding: 2px 2px 2px 10px;
+    color: #D7DADB;
+
+}
+h2{
+    color:#D7DADB;
+
 }
 

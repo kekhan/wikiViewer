@@ -26,7 +26,6 @@ function getWikiInfo(){
 }
 function wikiHtmlCall(data){
 	document.getElementById("listItems").innerHTML="";
-	document.getElementById("textLoad").innerHTML ="Reload to Search Again"
 	var articleTitles =data[1];
 	var webUrl= data[data.length-1]
 	var articleInfo = data[2];
