@@ -3,7 +3,7 @@ var myRequest = new XMLHttpRequest();
 function getWikiInfo(){
 
 	var val = document.getElementById('input').value;
-	var url = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + val + '&format=json&origin=*';
+	var url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + val + '&format=json&origin=*';
 
 
 	document.getElementById("opened").innerHTML= "wikipedia Search: "+val;
