@@ -3,26 +3,22 @@ var myRequest = new XMLHttpRequest();
 function getWikiInfo(){
 
 	var val = document.getElementById('input').value;
-
-	document.getElementById("opened").innerHTML= "wikipedia Search: "+val;	
-	var myRequest = new XMLHttpRequest();
-	myRequest.onreadystatechange = function(){
-		if (myRequest.readyState === XMLHttpRequest.DONE)
-		{
-			if (myRequest.status < 400)
-
-			{
-				var str = JSON.parse(myRequest.responseText);
-				wikiHtmlCall(str);
-
-			}
-		}
-	};
-
-
 	var url = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + val + '&format=json&origin=*';
-	myRequest.open('GET',url,true);
+
+
+	document.getElementById("opened").innerHTML= "wikipedia Search: "+val;
+	var myRequest = new XMLHttpRequest();
+	myRequest.open('GET',url, true);
+	myRequest.responseText = 'json';
 	myRequest.send(null);
+	myRequest.onload = function() {
+    const wikiResponse = myRequest.response;
+    console.log(wikiResponse);
+    wikiHtmlCall(JSON.parse(wikiResponse));
+    }
+
+
+
 }
 function wikiHtmlCall(data){
 	document.getElementById("listItems").innerHTML="";
@@ -36,17 +32,17 @@ function wikiHtmlCall(data){
 		var ul = document.getElementById("listItems");
 	    var li = document.createElement("li");
 
-		str= articleTitles[i]+': '+articleInfo[i]+"\r";
+		str= articleTitles[i]+' '+articleInfo[i]+"\r";
 		anchorElem = document.createElement('a');
         anchorElem.setAttribute("href", webUrl[i]);
         anchorElem.innerHTML = str;
         li.appendChild(anchorElem);
         ul.appendChild(li);
-       
+
         //document.body.appendChild(anchorElem);
 
 
-		
+
 	}
-	
+
 }
