@@ -24,8 +24,11 @@ ul {
 }
 
 li {
+    transition: all 0.3s ease;
     padding: 20px;
     margin-left: 35px;
+    list-style-type: none;
+    
 }
 li:hover{
 	background-color: #FC4349;
@@ -33,10 +36,12 @@ li:hover{
 
 li {
     background: #D7DADB;
-    margin: 5px;
+    margin: 3px;
 }
 a{
-	color: #6DBCDB;
+    color: rgb(27, 34, 44);
+    font-size: 2rem;
+    text-decoration: none;
 }
 a:hover{
 	
